@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sha1-implementation.iml" filepath="$PROJECT_DIR$/.idea/modules/sha1-implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sha1-implementation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sha1-implementation_main.iml" group="sha1-implementation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sha1-implementation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sha1-implementation_test.iml" group="sha1-implementation" />
+    </modules>
+  </component>
+</project>
