@@ -5,13 +5,12 @@ import static org.junit.Assert.*;
 
 public class SHA1Test
 {
-    @Test public void paddedMessageLengthTest()
+    @Test public void SHA1HashingTest()
     {
         SHA1 sha1 = new SHA1();
         assertEquals(
-            "Result should not have an excess byte",
-            0,
-            sha1.getPaddedMessageLengthOf("hi!") % 64
+            "73769065eabe2098139783639e6e438f4946eafe",
+            sha1.digestMessage("Every time you smile at me, I feel weak.")
         );
     }
 }

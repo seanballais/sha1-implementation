@@ -2,12 +2,6 @@ package app;
 
 public class SHA1
 {
-    public int getPaddedMessageLengthOf(String message)
-    {
-        // Temporary function
-        return this.padMessage(message).length;
-    }
-
     public String digestMessage(String message)
     {
         byte[] messageBlocks = this.padMessage(message);
@@ -22,7 +16,7 @@ public class SHA1
             this.processBlock(messageBlock, hashes, constantWords);
         }
 
-
+        return this.stringifyHash(this.getFinalHash(hashes));
     }
 
     private byte[] padMessage(String message)
@@ -120,13 +114,25 @@ public class SHA1
         return (value << offset) | (value >>> (32 - offset));
     }
 
-    private String stringifyHash(int[] hash)
+    private byte[] getFinalHash(int[] hash)
     {
         byte[] finalHash = new byte[20];
         for (int i = 0; i < hash.length; i++) {
             for (int j = 0; j < 4; j++) {
-                finalHash[]
+                finalHash[(3 - j) + 4 * i] = (byte) ((hash[i] >> 8 * j) & 0xFF);
             }
         }
+
+        return finalHash;
+    }
+
+    private String stringifyHash(byte[] hash)
+    {
+        StringBuilder hashString = new StringBuilder();
+        for (byte b : hash) {
+            hashString.append(String.format("%02x", b));
+        }
+
+        return hashString.toString();
     }
 }
