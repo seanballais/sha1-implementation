@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sha1-implementation:jar">
+    <output-path>$PROJECT_DIR$/jar/</output-path>
+    <root id="archive" name="sha1-implementation.jar">
+      <element id="module-output" name="sha1-implementation_main" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

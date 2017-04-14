@@ -47,17 +47,21 @@ public class App
             }
 
             String[] messages = new String[numStrings];
+            int messageIndex = 0;
             while (numStrings > 0) {
-                messages[messages.length - numStrings] = scanner.nextLine();
-                scanner.nextLine(); // Discard leftover characters
+                messageIndex = messages.length - numStrings;
+                System.out.print("Message #" + (messageIndex + 1) + ": ");
+                messages[messageIndex] = scanner.nextLine();
 
                 numStrings--;
             }
 
             System.out.println("==========");
+            int nMessage = 1;
             for (String message : messages) {
-                System.out.println("Original message: " + message);
+                System.out.println("Original message #" + nMessage++ + ": " + message);
                 System.out.println("Hashed Message: " + sha1.digestMessage(message));
+                System.out.println("");
             }
         }
     }
