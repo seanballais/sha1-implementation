@@ -1,2 +1,2 @@
 # sha1-implementation
-An implementation of SHA1
+An implementation of app.SHA1
