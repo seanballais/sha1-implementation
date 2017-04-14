@@ -56,5 +56,13 @@ public class SHA1Test
             "3f603532b89fc87807de250d8585e9dc04b149de",
             sha1.digestMessage("Really? Really now? When Sir Yuno sees this, he's probably gon' be making fun of this.")
         );
+        assertEquals(
+            "9404aa2650772e8a6cc7efca9182ab7c38f8feca",
+            sha1.digestMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac eleifend est, in egestas risus. Aenean consequat odio metus.")
+        );
+        assertEquals(
+            "84983e441c3bd26ebaae4aa1f95129e5e54670f1",
+            sha1.digestMessage("abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq")
+        );
     }
 }
